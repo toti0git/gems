@@ -3,11 +3,15 @@ package main.Java.models;
 import java.util.List;
 
 public class Jewelery {
-    private List <? extends Gem> gems;
+    private List<Gem> gemsList;
+     public double carats;
 
-    public Jewelery(List<? extends Gem> gems) {
-        this.gems = gems;
+    public Jewelery(List<Gem> gems) {
+        this.gemsList = gems;
     }
 
 
-}
+
+
+    }
+

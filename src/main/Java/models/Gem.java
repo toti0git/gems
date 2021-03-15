@@ -1,13 +1,28 @@
 package main.Java.models;
 
-public class Gem {
-    private String name;
-    private double carats;
-    private  GemsType types;
+import main.Java.enums.GemsType;
+import main.Java.enums.NameOfGems;
+
+public abstract class Gem {
+    private NameOfGems name;
+     double carats;
+    private GemsType types;
     private int price;
     private String color;
 
-    public void setName(String name) {
+    public Gem(NameOfGems name, double carats, GemsType types, int price) {
+        this.name = name;
+        this.carats = carats;
+        this.types = types;
+        this.price = price;
+
+    }
+
+    protected Gem() {
+    }
+
+
+    public void setName(NameOfGems name) {
         this.name = name;
     }
 
@@ -27,7 +42,7 @@ public class Gem {
         this.color = color;
     }
 
-    public String getName() {
+    public NameOfGems getName() {
         return name;
     }
 
